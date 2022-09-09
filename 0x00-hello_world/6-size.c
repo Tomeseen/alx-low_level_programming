@@ -3,7 +3,7 @@
  * main -  prints the size of various types on the computer it is compiled
  * Return: 0 if exited properly non-zero otherwise
  */
-int main (void)
+int main(void)
 {
 	printf("Size of a char: %i byte(s)\n", sizeof(char));
 	printf("Size of an int: %i byte(s)\n", sizeof(int));
