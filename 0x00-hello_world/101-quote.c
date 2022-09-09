@@ -1,11 +1,11 @@
 #include <stdio.h>
+#include <unistd.h>
 /**
- * main - prints the phrase
- * "and that piece of art is useful" - Dora Korpar, 2015-10-19"
- * Return: 0 if exited properly, non-zero otherwise
+ * main - prints the phrase without printf or puts
+ * Return: 1 if succes
  */
 int main(void)
 {
-	output(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 2);
+	output(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 58);
 	return (1);
 }
