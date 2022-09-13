@@ -12,7 +12,6 @@ int main(void)
 {
 	char letter;
 
-	print_alphabet();
 
 	for (letter = 'a'; letter <= 'z'; letter++)
 		_putchar(letter);
