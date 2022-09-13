@@ -1,14 +1,14 @@
 #include "main.h"
 
 /**
- * main - check your code
+ * print_alphabet - check your code
  *
  * Description - prints the alphabet in lowercase
  *
  * Return: 0
  */
 
-int main(void)
+void print_alphabet(void)
 {
 	char letter;
 
