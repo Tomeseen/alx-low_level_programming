@@ -10,9 +10,12 @@
 
 int main(void)
 {
-	print_alphabet("print all lowercase letters on the next line\n");
-	for (ch = 'a'; ch <= 'z'; ch++)
-		_putchar(ch);
+	char letter;
+
+	print_alphabet();
+
+	for (letter = 'a'; letter <= 'z'; letter++)
+		_putchar(letter);
 	_putchar('\n');
 
 	return (0);
