@@ -2,7 +2,7 @@
 
 /**
  * _strlen- count the string
- * rev_string- entry point
+ * rev_string- reverses a string
  * Description: prints in reverse
  * @s: checked
  * Return: nothing
