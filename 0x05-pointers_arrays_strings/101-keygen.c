@@ -9,9 +9,10 @@
 
 int main(void)
 {
+int i;
 srand((unsigned int)time(NULL));
 char pass[13];
-int i;
+
 
 
 for (i = 0; i < 4; i++)
