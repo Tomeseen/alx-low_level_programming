@@ -8,27 +8,25 @@
 
 char *cap_string(char *s)
 {
-	int i, j, separatorFound;
+	int i = 0;
 
-	separatorFound = 1;
-
-	for (i = 0; s[i]; ++i)
+	while (s[i] != '\0')
 	{
-		if (separatorFound && s[i] >= 'a' && s[i] <= 'z')
+		if (s[0] <= 122 && s[0] >= 97)
 		{
-			s[i] = s[i] -  32;
+			s[0] = s[0] - 32;
 		}
-		separatorFound = 0;
-		for (j = 0; j < 12; j++)
+		if (s[i] == 32 || s[i] == 46 || s[i] == '\t' ||
+		    s[i] == '\n' || s[i] == 44 || s[i] == 49 ||
+		    s[i] == '!' || s[i] == '?' || s[i] == '(' ||
+		    s[i] == ')' || s[i] == '{' || s[i] == '}')
 		{
-			if (s[i] == '\t' || s[i] == '\n' || s[i] == ','
-			    || s[i] == '\"' || s[i] == '.' || s[i] == '!' ||
-			    s[i] == '{' || s[i] == '}' || s[i] == '(' ||
-			    s[i] == ')' || s[i] == ' ' || s[i] == '?')
+			if (s[i + 1] <= 122 && s[i + 1] >= 97)
 			{
-				separatorFound = 1
+				s[i + 1] = s[i + 1] - 32;
 			}
 		}
+		i++
 	}
 	return (s);
 }
