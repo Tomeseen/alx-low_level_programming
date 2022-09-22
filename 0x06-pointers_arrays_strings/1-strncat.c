@@ -2,9 +2,9 @@
 
 /**
  * _strncat - use at most n bytes from src
- * @src: source string
- * @dest: destination string
- * @n: integer to be declared
+ * @src: checked
+ * @dest: checked
+ * @n: checked
  * Return: pointer to the resulting string dest
  */
 
@@ -21,6 +21,8 @@ char *_strncat(char *dest, char *src, int n)
 		i++;
 		j++;
 	}
+
+	i = 0;
 
 	while (*(src + i) != *(src + n))
 	{
