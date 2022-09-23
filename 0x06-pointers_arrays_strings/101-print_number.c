@@ -8,28 +8,40 @@
 
 void print_number(int n)
 {
-	unsigned int m, d, count;
+	int i;
+	int divisor = 1;
+	unsigned int x = n;
+	unsigned int y = n;
+	int c = 0;
 
+	if (n == 0)
+	{
+		_putchar('0');
+	}
 	if (n < 0)
 	{
-		_putchar(45);
-		m = n * -1;
-	}
-	else
-	{
-		m = n;
-	}
-	d = m;
-	count = -1;
-
-	while (d > 9)
-	{
-		d /= 10;
-		count *= 10;
+		_putchar('-');
+		n = n + 1; /* increment the number */
+		n = -n;
+		y = n;
+		x = n;
+		x += 1;
+		y += 1;
 	}
 
-	for (; count >= 1; count /= 10)
+	while (x != 0)
 	{
-		_putchar(((m / count) % 10) + 48);
+		x = x / 10; /* first digit */
+		c++; /*  increment c until the remainder is 0 */
+	}
+	for (i = 1; i < c; i++)
+	{
+		divisor *= 10; /* increment the divisor by 10 */
+	}
+	for (i = 0; i < c; i++)
+	{
+		_putchar((y / divisor) + '0');
+		y = y % divisor;
+		divisor = divisor / 10;
 	}
 }
