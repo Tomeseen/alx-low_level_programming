@@ -7,12 +7,12 @@
  * Return: 0
  */
 
-int main(int argc, char *argv)
+int main(int argc, char *argv[])
 {
-	int arg;
+	int n;
 
-	for (arg = 0; arg < argc; arg++)
-		printf("%s\n", argv[arg]);
+	for (n = 0; n < argc; n++)
+		printf("%s\n", argv[n]);
 
 	return (0);
 
