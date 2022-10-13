@@ -46,13 +46,13 @@ int op_div(int a, int b)
 }
 
 /**
- * op_mod - calculates the remainder of the division of two integers
+ * op_mod - returns the remainder of the division of two integers
  * @a: first integer
  * @b: second integer
- * Return: the remainder of b after division
+ * Return: the remainder of the division of a by b
  */
 
-int op_mod(int a, int b)int op_mod(int a, int b)
+int op_mod(int a, int b)
 {
 	return (a % b);
 }
